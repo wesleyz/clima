@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for d in dados %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h2>Cidade: {{ d[1] }}</h2>
+              
+              <small class="text-muted">{{ d[2] }}</small>
+            </div>
+            <p>Condição {{ d[5] }}</p>
+            
+            <p class="article-content">Temperatura: {{ d[4] }} °C</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
